@@ -1,5 +1,5 @@
 <Solution>
   <Project Path="MoneyRec.API/MoneyRec.API.csproj" Id="5b0088ef-da4f-4833-bd27-5fefbbe495ef" />
   <Project Path="MoneyRec.Core/MoneyRec.Core.csproj" />
-  <Project Path="MoneyRec.WPF/MoneyRec.WPF.csproj" />
+  <Project Path="MoneyRec.WPF/MoneyRec.App.csproj" />
 </Solution>
