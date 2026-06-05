@@ -13,6 +13,7 @@ namespace MoneyRec.WPF.ViewModels.AuthorizationViewModels
     {
         Page _loginInstance;
         Page _registrationInstance;
+        [ObservableProperty]
         Page _currentInstance;
         [ObservableProperty]
         string _buttonName;
@@ -27,15 +28,15 @@ namespace MoneyRec.WPF.ViewModels.AuthorizationViewModels
         [RelayCommand]
         void ChangeInstance()
         {
-            if (_currentInstance is LoginPage)
+            if (CurrentInstance is LoginPage)
             {
                 ButtonName = "Вход";
-                _currentInstance = _registrationInstance;
+                CurrentInstance = _registrationInstance;
             }
             else
             {
                 ButtonName = "Регистрация";
-                _currentInstance = _loginInstance;
+                CurrentInstance = _loginInstance;
             }
         }
     }

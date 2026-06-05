@@ -13,12 +13,12 @@ namespace MoneyRec.WPF.ViewModels.AuthorizationViewModels
     public partial class RegistrationVM : ObservableObject
     {
         [ObservableProperty]
-        string _login, _email, _password;
+        string _login, _email, _password, _rePassword;
         User? _user;
 
         public RegistrationVM()
         {
-            _login = _email = _password = string.Empty;
+            _login = _email = _password = _rePassword = string.Empty;
         }
 
         [RelayCommand]
@@ -29,6 +29,11 @@ namespace MoneyRec.WPF.ViewModels.AuthorizationViewModels
                 CreateUser();
                 MessageBox.Show("Успешно!");
             }
+        }
+
+        bool CheckRePassword()
+        {
+            return Password == RePassword;
         }
 
         async void CreateUser()

@@ -16,11 +16,16 @@ namespace MoneyRec.WPF.ViewModels.AuthorizationViewModels
         string _password;
         User? _user;
 
-        public LoginVM(Window instance)
+        public LoginVM()
         {
-            _instance = instance;
+            _instance = App.Current.MainWindow;
+#if DEBUG
+            Login = "TestUser";
+            Password = "qwerty";
+#else
             Login = "";
             Password = "";
+#endif
         }
 
         [RelayCommand]
