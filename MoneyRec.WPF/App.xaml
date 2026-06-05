@@ -4,6 +4,14 @@
              xmlns:local="clr-namespace:MoneyRec.WPF"
              StartupUri="Views/AuthorizationWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resourses/Styles/Colors.xaml"/>
+                <ResourceDictionary Source="/Resourses/Styles/TextBox.xaml"/>
+                <ResourceDictionary Source="/Resourses/Styles/Button.xaml"/>
+                <ResourceDictionary Source="/Resourses/Styles/Minors.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+            
     </Application.Resources>
 </Application>

@@ -17,7 +17,7 @@ namespace MoneyRec.WPF
         public static User User;
         static App()
         {
-            User = null;
+            User = null!;
             Client = new();
             Context = new();
         }

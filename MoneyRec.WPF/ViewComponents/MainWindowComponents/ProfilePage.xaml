@@ -6,9 +6,22 @@
       xmlns:local="clr-namespace:MoneyRec.WPF.ViewComponents.MainWindowComponents"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="ProfilePage">
+      Title="Профиль">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height=".1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".3*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image Grid.Column="0" Source="/Resourses/Assets/Avatar.png"/>
+        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="200">
+            <TextBlock Text="{Binding Login, StringFormat='Логин: \{0\}'}"/>
+            <TextBlock Text="{Binding Email, StringFormat='Почта: \{0\}'}"/>
+        </StackPanel>
+        <Button Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Content="Редактировать" Command="{Binding ManageCommand}" Margin="0,0,10,10" Cursor="Hand"/>
     </Grid>
 </Page>

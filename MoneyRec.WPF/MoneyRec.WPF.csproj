@@ -10,15 +10,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resourses\Assets\Avatar.png" />
     <None Remove="Resourses\Assets\Capitalism.png" />
+    <None Remove="Resourses\Assets\Card.png" />
+    <None Remove="Resourses\Assets\money.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Resourses\Assets\money icon.ico" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Resourses\Styles\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -31,7 +30,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resourses\Assets\Avatar.png" />
     <Resource Include="Resourses\Assets\Capitalism.png" />
+    <Resource Include="Resourses\Assets\Card.png" />
+    <Resource Include="Resourses\Assets\money.png" />
   </ItemGroup>
 
 </Project>

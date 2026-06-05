@@ -1,0 +1,27 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <SolidColorBrush x:Key="PrimaryBackgroundBrush" Color="#F4F9F4"/>
+    <!-- Фон окна/контейнеров -->
+    <SolidColorBrush x:Key="CardBrush" Color="#FFFFFF"/>
+    <!-- Карточки, списки -->
+
+    <!-- Основной акцентный цвет -->
+    <SolidColorBrush x:Key="PrimaryBrush" Color="#7CB083"/>
+    <!-- Основная зелень -->
+    <SolidColorBrush x:Key="PrimaryHoverBrush" Color="#8FC495"/>
+    <!-- При наведении -->
+    <SolidColorBrush x:Key="PrimaryPressedBrush" Color="#619568"/>
+    <!-- При нажатии -->
+
+    <!-- Дополнительные оттенки -->
+    <SolidColorBrush x:Key="SecondaryGreenBrush" Color="#A8C9A6"/>
+    <!-- Светлая зелень для второстепенных элементов -->
+    <SolidColorBrush x:Key="BorderBrush" Color="#DCE8DA"/>
+    <!-- Рамки -->
+    <SolidColorBrush x:Key="TextPrimaryBrush" Color="#2C3E2B"/>
+    <!-- Основной текст (тёмный) -->
+    <SolidColorBrush x:Key="TextSecondaryBrush" Color="#6A7A68"/>
+    <!-- Подсказки, плейсхолдеры -->
+    <SolidColorBrush x:Key="ErrorBrush" Color="#E5A0A0"/>
+</ResourceDictionary>

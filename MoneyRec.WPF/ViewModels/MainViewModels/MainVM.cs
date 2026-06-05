@@ -13,12 +13,15 @@ namespace MoneyRec.WPF.ViewModels.MainViewModels
     {
         [ObservableProperty]
         Page _currentInstance;
+        [ObservableProperty]
+        string _pageLabel;
         Page[] _pages;
 
         public MainVM()
         {
             _pages = new Page[] { new ProfilePage(), new AccountsPage(), new CategoriesPage(), new TransactionsPage()};
             CurrentInstance = _pages[0];
+            PageLabel = CurrentInstance.Title;
         }
 
 
@@ -29,6 +32,7 @@ namespace MoneyRec.WPF.ViewModels.MainViewModels
             if (_pages[Convert.ToInt32(index)] != CurrentInstance)
             {
                 CurrentInstance = _pages[Convert.ToInt32(index)];
+                PageLabel = CurrentInstance.Title;
             }
         }
     }
