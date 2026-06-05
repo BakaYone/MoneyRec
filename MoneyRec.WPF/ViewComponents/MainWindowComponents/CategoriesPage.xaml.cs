@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MoneyRec.WPF.ViewModels.MainViewModels;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -21,6 +23,7 @@ namespace MoneyRec.WPF.ViewComponents.MainWindowComponents
         public CategoriesPage()
         {
             InitializeComponent();
+            DataContext = new CategoriesVM();
         }
     }
 }
