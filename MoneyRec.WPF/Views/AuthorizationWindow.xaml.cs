@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MoneyRec.WPF.ViewModels.AuthorizationViewModels;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -20,6 +21,7 @@ namespace MoneyRec.WPF.Views
         public LoginWindow()
         {
             InitializeComponent();
+            DataContext = new AuthorizationVM();
         }
     }
 }
