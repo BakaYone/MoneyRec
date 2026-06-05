@@ -1,0 +1,35 @@
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using Microsoft.Identity.Client;
+using MoneyRec.WPF.ViewComponents.MainWindowComponents;
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Windows.Controls;
+
+namespace MoneyRec.WPF.ViewModels.MainViewModels
+{
+    public partial class MainVM : ObservableObject
+    {
+        [ObservableProperty]
+        Page _currentInstance;
+        Page[] _pages;
+
+        public MainVM()
+        {
+            _pages = new Page[] { new ProfilePage(), new AccountsPage(), new CategoriesPage(), new TransactionsPage()};
+            CurrentInstance = _pages[0];
+        }
+
+
+        [RelayCommand]
+        void ChangeInstance(object index)
+        {
+
+            if (_pages[Convert.ToInt32(index)] != CurrentInstance)
+            {
+                CurrentInstance = _pages[Convert.ToInt32(index)];
+            }
+        }
+    }
+}
