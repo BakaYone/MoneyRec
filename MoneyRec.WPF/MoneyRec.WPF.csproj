@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resourses\Assets\application.png" />
     <None Remove="Resourses\Assets\Avatar.png" />
     <None Remove="Resourses\Assets\Capitalism.png" />
     <None Remove="Resourses\Assets\Card.png" />
@@ -30,10 +31,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resourses\Assets\application.png" />
     <Resource Include="Resourses\Assets\Avatar.png" />
     <Resource Include="Resourses\Assets\Capitalism.png" />
     <Resource Include="Resourses\Assets\Card.png" />
     <Resource Include="Resourses\Assets\money.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ManageDialogWindows\TransactionsManage\" />
   </ItemGroup>
 
 </Project>

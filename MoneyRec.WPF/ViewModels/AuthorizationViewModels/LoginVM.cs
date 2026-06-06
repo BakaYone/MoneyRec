@@ -20,8 +20,8 @@ namespace MoneyRec.WPF.ViewModels.AuthorizationViewModels
         {
             _instance = App.Current.MainWindow;
 #if DEBUG
-            Login = "TestUser";
-            Password = "qwerty";
+            Login = App.Context.Users.ToList()[0].Login;
+            Password = App.Context.Users.ToList()[0].Password;
 #else
             Login = "";
             Password = "";
