@@ -10,6 +10,9 @@ using System.Windows.Media.Animation;
 
 namespace MoneyRec.WPF.ViewModels.AuthorizationViewModels
 {
+    /// <summary>
+    /// Класс для логики страницы регистрации
+    /// </summary>
     public partial class RegistrationVM : ObservableObject
     {
         [ObservableProperty]

@@ -9,6 +9,9 @@ using System.Windows.Controls;
 
 namespace MoneyRec.WPF.ViewModels.AuthorizationViewModels
 {
+    /// <summary>
+    /// Класс для логики окна авторизации
+    /// </summary>
     public partial class AuthorizationVM : ObservableObject
     {
         Page _loginInstance;

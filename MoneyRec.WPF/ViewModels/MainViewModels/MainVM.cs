@@ -9,6 +9,9 @@ using System.Windows.Controls;
 
 namespace MoneyRec.WPF.ViewModels.MainViewModels
 {
+    /// <summary>
+    /// Класс для логики основного окна
+    /// </summary>
     public partial class MainVM : ObservableObject
     {
         [ObservableProperty]

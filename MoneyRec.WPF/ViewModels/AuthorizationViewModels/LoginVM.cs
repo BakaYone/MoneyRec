@@ -7,6 +7,9 @@ using System.Windows;
 
 namespace MoneyRec.WPF.ViewModels.AuthorizationViewModels
 {
+    /// <summary>
+    /// Класс для логики страницы входа
+    /// </summary>
     public partial class LoginVM : ObservableObject
     {
         Window _instance;
