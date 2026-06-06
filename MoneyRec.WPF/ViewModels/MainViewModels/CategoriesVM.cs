@@ -8,6 +8,9 @@ using System.Text;
 
 namespace MoneyRec.WPF.ViewModels.MainViewModels
 {
+    /// <summary>
+    /// Класс для логики страницы категорий
+    /// </summary>
     public partial class CategoriesVM : ObservableObject
     {
         [ObservableProperty]
