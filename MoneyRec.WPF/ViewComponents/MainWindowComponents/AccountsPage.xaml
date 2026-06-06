@@ -21,15 +21,15 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
-                        <ColumnDefinition Width=".2*"/>
+                        <ColumnDefinition Width="auto" />
                     </Grid.ColumnDefinitions>
-                    <Image Grid.Column="0" Source="/Resourses/Assets/Capitalism.png" MaxHeight="25" MaxWidth="25"/>
-                    <TextBlock Grid.Column="1" Text="{Binding Title, TargetNullValue='null'}" FontSize="18"/>
-                    <TextBlock Grid.Column="2" Text="{Binding Balance, StringFormat='\{0:C2\}', TargetNullValue='0', ConverterCulture=ru-RU}" FontSize="18"/>
+                    <Image Grid.Column="0" Source="/Resourses/Assets/money.png" MaxHeight="35" Margin="10,0"/>
+                    <TextBlock Grid.Column="1" Text="{Binding Title, TargetNullValue='null'}" FontSize="18" Margin="10, 0"/>
+                    <TextBlock Grid.Column="2" Text="{Binding Balance, StringFormat='\{0:C2\}', TargetNullValue='0', ConverterCulture=ru-RU}" FontSize="18" HorizontalAlignment="Right"/>
                 </Grid>
             </DataTemplate>
         </ListBox.ItemTemplate>
     </ListBox>
-        <Button Grid.Row="1" Content="Добавить" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <Button Grid.Row="1" Content="Добавить" HorizontalAlignment="Right" VerticalAlignment="Center" Command="{Binding AddCommand}"/>
     </Grid>
 </Page>
