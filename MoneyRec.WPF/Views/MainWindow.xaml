@@ -13,13 +13,13 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <Grid Grid.Column="0">
+        <Grid Grid.Column="0" Background="{StaticResource SecondaryGreenBrush}">
             
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition Height=".1*"/>
             </Grid.RowDefinitions>
-            <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" Cursor="">
+            <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,10,0,0" >
                 <Image Source="/Resourses/Assets/Capitalism.png" MaxHeight="100"/>
                 <Button Content="Счета" Command="{Binding ChangeInstanceCommand}" CommandParameter="1" Margin="0,20"/>
                 <Button Content="Категории" Command="{Binding ChangeInstanceCommand}" CommandParameter="2" Margin="0,20"/>
@@ -27,13 +27,13 @@
             </StackPanel>
             <Button Style="{StaticResource SecondaryButton}" Grid.Row="1" Content="Профиль" Command="{Binding ChangeInstanceCommand}" CommandParameter="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,10"/>
         </Grid>
-        <Rectangle Grid.Column="1" Fill="Gray"></Rectangle>
-        <Grid Grid.Column="2">
+        <Rectangle Grid.Column="1" Fill="{StaticResource PrimaryBrush}"></Rectangle>
+        <Grid Grid.Column="2" Margin="10,0,10,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height=".1*"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Label Grid.Row="0" Content="{Binding PageLabel}" FontSize="40" FontWeight="DemiBold"/>
+            <Label Grid.Row="0" Content="{Binding PageLabel}" FontSize="50" FontWeight="DemiBold"/>
             <Frame Grid.Row="1" Content="{Binding CurrentInstance}" NavigationUIVisibility="Hidden"/>
         </Grid>
         
