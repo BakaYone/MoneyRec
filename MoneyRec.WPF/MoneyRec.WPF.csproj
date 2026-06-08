@@ -24,6 +24,7 @@
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
     <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.142" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
   </ItemGroup>
 
   <ItemGroup>
@@ -36,10 +37,6 @@
     <Resource Include="Resourses\Assets\Capitalism.png" />
     <Resource Include="Resourses\Assets\Card.png" />
     <Resource Include="Resourses\Assets\money.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ManageDialogWindows\TransactionsManage\" />
   </ItemGroup>
 
 </Project>

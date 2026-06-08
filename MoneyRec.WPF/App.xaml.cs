@@ -15,6 +15,7 @@ namespace MoneyRec.WPF
         public static HttpClient Client;
         public static MonRecContext Context;
         public static User User;
+        
         static App()
         {
             User = null!;
