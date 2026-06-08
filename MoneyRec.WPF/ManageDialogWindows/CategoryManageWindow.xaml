@@ -1,0 +1,14 @@
+﻿<Window x:Class="MoneyRec.WPF.ManageDialogWindows.CategoriesManage.CategoryManageWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MoneyRec.WPF.ManageDialogWindows.CategoriesManage"
+        mc:Ignorable="d"
+        Title="CategoryManageWindow" Height="450" Width="800">
+    <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Width="200">
+        <Label Content="Название"/>
+        <TextBox Text="{Binding Title}"/>
+        <Button Content="Подтвердить" Command="{Binding SubmitCommand}"/>
+    </StackPanel>
+</Window>

@@ -14,11 +14,11 @@ using System.Windows.Shapes;
 namespace MoneyRec.WPF.ManageDialogWindows
 {
     /// <summary>
-    /// Логика взаимодействия для AccountManageWindow.xaml
+    /// Логика взаимодействия для TransactionManageWindow.xaml
     /// </summary>
-    public partial class AccountManageWindow : Window
+    public partial class TransactionManageWindow : Window
     {
-        public AccountManageWindow(AccountsVM vm)
+        public TransactionManageWindow(TransactionsVM vm)
         {
             InitializeComponent();
             DataContext = vm;

@@ -14,14 +14,14 @@ using System.Windows.Shapes;
 namespace MoneyRec.WPF.ManageDialogWindows
 {
     /// <summary>
-    /// Логика взаимодействия для AccountManageWindow.xaml
+    /// Логика взаимодействия для ProfileManageWindow.xaml
     /// </summary>
-    public partial class AccountManageWindow : Window
+    public partial class ProfileManageWindow : Window
     {
-        public AccountManageWindow(AccountsVM vm)
+        public ProfileManageWindow(ProfileVM dataContext)
         {
             InitializeComponent();
-            DataContext = vm;
+            DataContext = dataContext;
         }
     }
 }

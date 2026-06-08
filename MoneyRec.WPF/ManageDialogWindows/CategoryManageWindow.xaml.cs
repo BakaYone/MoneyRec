@@ -11,14 +11,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace MoneyRec.WPF.ManageDialogWindows
+namespace MoneyRec.WPF.ManageDialogWindows.CategoriesManage
 {
     /// <summary>
-    /// Логика взаимодействия для AccountManageWindow.xaml
+    /// Логика взаимодействия для CategoryManageWindow.xaml
     /// </summary>
-    public partial class AccountManageWindow : Window
+    public partial class CategoryManageWindow : Window
     {
-        public AccountManageWindow(AccountsVM vm)
+        public CategoryManageWindow(CategoriesVM vm)
         {
             InitializeComponent();
             DataContext = vm;
