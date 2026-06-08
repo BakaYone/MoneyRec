@@ -16,7 +16,7 @@ namespace MoneyRec.Core.Context
 
         public MonRecContext()
         {
-            
+            Database.EnsureCreated();
         }
 
         protected override void OnModelCreating(ModelBuilder mb)
@@ -42,7 +42,7 @@ namespace MoneyRec.Core.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            base.OnConfiguring(optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Test;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False;Command Timeout=30"));
+            base.OnConfiguring(optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=MoneyRec;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False;Command Timeout=30"));
             //base.OnConfiguring(optionsBuilder.UseSqlServer(@"Data Source=BAKA\BAKASERVER;Initial Catalog = MoneyRec; Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False;Command Timeout=30"));
         }
     }

@@ -6,12 +6,37 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Resourses\Assets\money icon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Resourses\Styles\" />
-    <Folder Include="Resourses\Assets\" />
-    <Folder Include="ViewModels\" />
+    <None Remove="Resourses\Assets\application.png" />
+    <None Remove="Resourses\Assets\Avatar.png" />
+    <None Remove="Resourses\Assets\Capitalism.png" />
+    <None Remove="Resourses\Assets\Card.png" />
+    <None Remove="Resourses\Assets\money.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resourses\Assets\money icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.142" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MoneyRec.Core\MoneyRec.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resourses\Assets\application.png" />
+    <Resource Include="Resourses\Assets\Avatar.png" />
+    <Resource Include="Resourses\Assets\Capitalism.png" />
+    <Resource Include="Resourses\Assets\Card.png" />
+    <Resource Include="Resourses\Assets\money.png" />
   </ItemGroup>
 
 </Project>

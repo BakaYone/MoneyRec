@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MoneyRec.WPF.ViewModels.AuthorizationViewModels;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -8,18 +9,20 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MoneyRec.WPF.Views
+namespace MoneyRec.WPF.ViewComponents.LoginWindowComponents
 {
     /// <summary>
-    /// Логика взаимодействия для LoginWindow.xaml
+    /// Логика взаимодействия для RegistrationPage.xaml
     /// </summary>
-    public partial class LoginWindow : Window
+    public partial class RegistrationPage : Page
     {
-        public LoginWindow()
+        public RegistrationPage()
         {
             InitializeComponent();
+            DataContext = new RegistrationVM();
         }
     }
 }

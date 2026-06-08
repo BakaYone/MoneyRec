@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MoneyRec.WPF.ViewModels.MainViewModels;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -8,19 +9,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MoneyRec.WPF.ViewComponents.LoginWindowComponents
+namespace MoneyRec.WPF.ManageDialogWindows
 {
     /// <summary>
-    /// Логика взаимодействия для LoginPage.xaml
+    /// Логика взаимодействия для TransactionManageWindow.xaml
     /// </summary>
-    public partial class LoginPage : Page
+    public partial class TransactionManageWindow : Window
     {
-        public LoginPage()
+        public TransactionManageWindow(TransactionsVM vm)
         {
             InitializeComponent();
+            DataContext = vm;
         }
     }
 }

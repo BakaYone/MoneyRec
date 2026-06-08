@@ -1,7 +1,6 @@
 ﻿using MoneyRec.WPF.ViewModels.MainViewModels;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -10,20 +9,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MoneyRec.WPF.ViewComponents.MainWindowComponents
+namespace MoneyRec.WPF.ManageDialogWindows.CategoriesManage
 {
     /// <summary>
-    /// Логика взаимодействия для CategoriesPage.xaml
+    /// Логика взаимодействия для CategoryManageWindow.xaml
     /// </summary>
-    public partial class CategoriesPage : Page
+    public partial class CategoryManageWindow : Window
     {
-        public CategoriesPage()
+        public CategoryManageWindow(CategoriesVM vm)
         {
             InitializeComponent();
-            DataContext = new CategoriesVM();
+            DataContext = vm;
         }
     }
 }

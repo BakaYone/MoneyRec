@@ -4,11 +4,41 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:MoneyRec.WPF.ViewComponents.MainWindowComponents"
+      xmlns:b="clr-namespace:Microsoft.Xaml.Behaviors;assembly=Microsoft.Xaml.Behaviors"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="AccountsPage">
+      Title="Счета">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height=".1*"/>
+        </Grid.RowDefinitions>
+    
+    <ListBox Grid.Row="0" ItemsSource="{Binding Accounts}" SelectedItem="{Binding Selected}">
+            <b:Interaction.Triggers>
+                <b:EventTrigger EventName="MouseDoubleClick">
+                    <b:InvokeCommandAction Command="{Binding ManageCommand}"/>
+                </b:EventTrigger>
+                <b:EventTrigger EventName="KeyDown">
+                    <b:InvokeCommandAction Command="{Binding DeleteCommand}" PassEventArgsToCommand="True"/>
+                </b:EventTrigger>
+            </b:Interaction.Triggers>
+        <ListBox.ItemTemplate>
+            <DataTemplate>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="auto" />
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Source="/Resourses/Assets/money.png" MaxHeight="35" Margin="10,0"/>
+                    <TextBlock Grid.Column="1" Text="{Binding Title, TargetNullValue='null'}" FontSize="18" Margin="10, 0"/>
+                    <TextBlock Grid.Column="2" Text="{Binding Balance, StringFormat='\{0:C2\}', TargetNullValue='0', ConverterCulture=ru-RU}" FontSize="18" HorizontalAlignment="Right"/>
+                </Grid>
+            </DataTemplate>
+        </ListBox.ItemTemplate>
+    </ListBox>
+        <Button Grid.Row="1" Content="Добавить" HorizontalAlignment="Right" VerticalAlignment="Center" Command="{Binding AddCommand}"/>
     </Grid>
 </Page>

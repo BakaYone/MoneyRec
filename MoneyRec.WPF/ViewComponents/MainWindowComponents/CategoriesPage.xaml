@@ -4,11 +4,38 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:MoneyRec.WPF.ViewComponents.MainWindowComponents"
+      xmlns:b="clr-namespace:Microsoft.Xaml.Behaviors;assembly=Microsoft.Xaml.Behaviors"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="CategoriesPage">
+      Title="Категории" >
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height=".1*"/>
+        </Grid.RowDefinitions>
+        <ListBox ItemsSource="{Binding Categories}" Background="{StaticResource BorderBrush}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectedItem="{Binding Selected}">
+            <b:Interaction.Triggers>
+                <b:EventTrigger EventName="MouseDoubleClick">
+                    <b:InvokeCommandAction Command="{Binding ManageCommand}"/>
+                </b:EventTrigger>
+            </b:Interaction.Triggers>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderThickness="2" BorderBrush="{StaticResource PrimaryBrush}" Width="150" Height="50">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Image Source="/Resourses/Assets/application.png" MaxHeight="30" Margin="5,0"/>
+                            <TextBlock Text="{Binding Title}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+        </ListBox>
+        <Button Content="Добавить" Grid.Row="1" HorizontalAlignment="Right" Margin="0,0,10,5" Command="{Binding AddCommand}" Style="{StaticResource SecondaryButton}"/>
     </Grid>
 </Page>

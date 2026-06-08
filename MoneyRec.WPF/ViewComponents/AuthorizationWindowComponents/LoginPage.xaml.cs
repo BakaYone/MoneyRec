@@ -1,7 +1,6 @@
-﻿using MoneyRec.WPF.ViewModels.MainViewModels;
+﻿using MoneyRec.WPF.ViewModels.AuthorizationViewModels;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -13,17 +12,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MoneyRec.WPF.ViewComponents.MainWindowComponents
+namespace MoneyRec.WPF.ViewComponents.LoginWindowComponents
 {
     /// <summary>
-    /// Логика взаимодействия для CategoriesPage.xaml
+    /// Логика взаимодействия для LoginPage.xaml
     /// </summary>
-    public partial class CategoriesPage : Page
+    public partial class LoginPage : Page
     {
-        public CategoriesPage()
+        public LoginPage()
         {
             InitializeComponent();
-            DataContext = new CategoriesVM();
+            DataContext = new LoginVM();
         }
     }
 }
