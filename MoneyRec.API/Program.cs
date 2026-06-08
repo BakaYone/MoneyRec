@@ -1,3 +1,5 @@
+using MoneyRec.Core.Context;
+
 namespace MoneyRec.API
 {
     public class Program
@@ -9,6 +11,7 @@ namespace MoneyRec.API
             // Add services to the container.
             builder.Services.AddAuthorization();
 
+            MonRecContext ctx = new MonRecContext();
 
             var app = builder.Build();
 
@@ -16,22 +19,9 @@ namespace MoneyRec.API
 
             app.UseAuthorization();
 
-            var summaries = new[]
+            app.MapGet(@"/UserTransactions{id}", async (int id) =>
             {
-                "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-            };
-
-            app.MapGet("/weatherforecast", (HttpContext httpContext) =>
-            {
-                var forecast = Enumerable.Range(1, 5).Select(index =>
-                    new WeatherForecast
-                    {
-                        Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                        TemperatureC = Random.Shared.Next(-20, 55),
-                        Summary = summaries[Random.Shared.Next(summaries.Length)]
-                    })
-                    .ToArray();
-                return forecast;
+                
             });
 
             app.Run();
